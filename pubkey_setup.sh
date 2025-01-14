@@ -30,7 +30,6 @@ setup_pubkey() {
 
 # 开启密钥登录，可选关闭密码登录
 enable_pubkey_login() {
-    setup_pubkey "overwrite"
 
     # 开启密钥登录
     sudo sed -i 's/^#\?\(PubkeyAuthentication\s*\).*/\1yes/' /etc/ssh/sshd_config
