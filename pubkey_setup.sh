@@ -14,9 +14,9 @@ setup_pubkey() {
     local auth_file="$ssh_dir/authorized_keys"
 
     mkdir -p "$ssh_dir"
-    chmod 700 "$ssh_dir"
+    sudo chmod 700 "$ssh_dir"
     touch "$auth_file"
-    chmod 600 "$auth_file"
+    sudo chmod 600 "$auth_file"
 
     if [[ $action == "append" ]]; then
 		echo -e "\n$pubkey" >> "$auth_file"
